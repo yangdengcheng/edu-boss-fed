@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <el-button type="text" class="hamburger" @click="toggleCollapse">
-      <i class="el-icon-s-fold" v-if="$store.state.isCollapse"></i>
+      <i class="el-icon-s-fold" v-if="!$store.state.isCollapse"></i>
       <i class="el-icon-s-unfold" v-else></i>
     </el-button>
     <app-breadcrumb></app-breadcrumb>

@@ -15,7 +15,7 @@ interface UserParams {
   endCreateTime?: number;
 }
 
-export const login = (data: User) => {
+export function login (data: User) {
   return request({
     method: 'POST',
     url: '/front/user/login',
@@ -24,21 +24,21 @@ export const login = (data: User) => {
 }
 
 // 获取菜单列表和资源列表权限
-export const getUserPermissions = () => {
+export function getUserPermissions () {
   return request({
     method: 'GET',
     url: '/boss/permission/getUserPermissions'
   })
 }
 
-export const getInfo = () => {
+export function getInfo () {
   return request({
     method: 'GET',
     url: '/front/user/getInfo'
   })
 }
 
-export const refreshToken = (params: { refreshtoken: string }) => {
+export function refreshToken (params: { refreshtoken: string }) {
   return request({
     method: 'GET',
     url: '/front/user/refresh_token',
@@ -46,7 +46,7 @@ export const refreshToken = (params: { refreshtoken: string }) => {
   })
 }
 
-export const getUserPages = (data: UserParams) => {
+export function getUserPages (data: UserParams) {
   return request({
     method: 'POST',
     url: '/boss/user/getUserPages',
